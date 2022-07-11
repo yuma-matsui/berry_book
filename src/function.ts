@@ -1,14 +1,11 @@
-type F = (repeatNum: number) => string
-
-// Fの関数型からnumと返り値の型を推論する
-const xRepeat: F = (num) => 'x'.repeat(num)
-
-
-
-type myObj = {
-  method: (string: string) => string;
+function generateCopyArray<Type> (el: Type, repeatNum: number): Type[] {
+  const array: Type[] = []
+  for (let i = 0; i < repeatNum; i++) {
+    array.push(el)
+  }
+  return array
 }
 
-const obj: myObj = {
-  method: (string) => string
-}
+console.log(generateCopyArray<string>('hello', 5))
+console.log(generateCopyArray<boolean>(true, 3))
+console.log(generateCopyArray<number>(1, 5))
