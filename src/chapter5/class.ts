@@ -3,7 +3,7 @@ type HasName = {
 }
 
 
-class User implements HasName {
+class UseR implements HasName {
   name: string
   age: number
 
