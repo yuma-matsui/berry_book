@@ -1,4 +1,4 @@
-import { type Animal, type Human } from "./module";
+import { type Animal, type Human } from "./module.js";
 
 const yum: Human = {
   name: 'yum',
